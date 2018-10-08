@@ -30,7 +30,7 @@ function post_types()
         'public' => true,
         'publicly_queryable' => true,
         'show_ui' => true,
-        'has_archive' =>false,
+        'has_archive' =>true,
         'hierarchical' => true,
         'rewrite' => array(
             'slug' => 'garderobi',
@@ -53,7 +53,7 @@ function post_types()
         'public' => true,
         'publicly_queryable' => true,
         'show_ui' => true,
-        'has_archive' =>false,
+        'has_archive' =>true,
         'hierarchical' => true,
         'rewrite' => array(
             'slug' => 'gorki',
