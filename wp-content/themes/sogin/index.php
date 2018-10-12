@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<img src="<?php echo get_field( 'banner_1');?>" alt="shkafi-kupe">
+<img class="full-width" src="<?php echo get_field( 'banner_1');?>" alt="shkafi-kupe">
 <div class="empty_separator"></div>
 <div class="main_categories">
     <div class="category_row">

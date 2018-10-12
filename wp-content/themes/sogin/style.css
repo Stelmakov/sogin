@@ -1663,6 +1663,7 @@ a.bold:active{
     -webkit-box-shadow: inset -1px -3px 0px 0px rgba(0,0,0,0.18);
     -moz-box-shadow: inset -1px -3px 0px 0px rgba(0,0,0,0.18);
     box-shadow: inset -1px -3px 0px 0px rgba(0,0,0,0.18);
+    white-space: nowrap;
 }
 .btn:hover{
     padding:16px 22px;
@@ -1750,4 +1751,13 @@ a.bold:active{
 }
 .home_benefits .item p{
     margin-bottom:0px;
+}
+.full-width{
+    width:100%;
+}
+@media (max-width: 1230px){
+    .sog_container{
+        margin:0 15px;
+        width:100%;
+    }
 }
