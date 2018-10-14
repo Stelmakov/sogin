@@ -9,11 +9,6 @@
     <title><?php bloginfo('name',19); ?><?php wp_title(); ?></title>
 
     <?php wp_head(); ?>
-    <style>
-        html{
-            margin-top:0px !important;
-        }
-    </style>
 </head>
 
 <body>
