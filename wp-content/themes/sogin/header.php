@@ -5,6 +5,8 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700,500&amp;subset=cyrillic-ext" rel="stylesheet">
+    <script type="text/javascript" src="/wp-content/themes/sogin/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/sogin/js/sogin.js"></script>
     <link rel="stylesheet" href="/wp-content/themes/sogin/style.css">
     <title><?php bloginfo('name',19); ?><?php wp_title(); ?></title>
 

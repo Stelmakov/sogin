@@ -63,6 +63,7 @@
     </div>
 </div>
 <div class="empty_separator"></div>
+
 <div class="footer">
     <div class="footer_item">
         <div class="logo">
@@ -99,7 +100,7 @@
             </div>
         </div>
     </div>
-    <div class="footer_item">
+    <div class="footer_item footer_menu">
         <div class="menu">
             <?php wp_nav_menu( array( 'theme_location'=> 'footer-menu')); ?>
         </div>

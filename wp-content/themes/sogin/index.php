@@ -1,5 +1,7 @@
 <?php get_header(); ?>
-<img class="full-width" src="<?php echo get_field( 'banner_1');?>" alt="shkafi-kupe">
+<a class="no-hover no-border" href="/shkafi">
+    <img class="full-width" src="<?php echo get_field( 'banner_1');?>" alt="shkafi-kupe">
+</a>
 <div class="empty_separator"></div>
 <div class="main_categories">
     <?php $cats = get_field('cats');?>
