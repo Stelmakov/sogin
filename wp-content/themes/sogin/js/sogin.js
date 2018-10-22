@@ -9,4 +9,5 @@ $(document).ready(function(){
             left:"+=100%"
         });
     });
+    baguetteBox.run('.product_single .images');
 });

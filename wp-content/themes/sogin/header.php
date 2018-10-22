@@ -8,8 +8,11 @@
     <script type="text/javascript" src="/wp-content/themes/sogin/js/jquery.min.js"></script>
     <script type="text/javascript" src="/wp-content/themes/sogin/js/sogin.js"></script>
     <link rel="stylesheet" href="/wp-content/themes/sogin/style.css">
+    <?php if (is_single()){ ?>
+        <link rel="stylesheet" href="/wp-content/themes/sogin/css/baguetteBox.min.css">
+        <script type="text/javascript" src="/wp-content/themes/sogin/js/baguetteBox.min.js"></script>
+    <?php } ?>
     <title><?php bloginfo('name',19); ?><?php wp_title(); ?></title>
-
     <?php wp_head(); ?>
 </head>
 
