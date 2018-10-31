@@ -1,0 +1,203 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+#scenery_type {
+	display: none;
+}
+#cupdoard_body .cupdoard_constructor_door {
+	text-align: center;
+	margin: 0px 0px 10px 0px;
+}
+#cupdoard_body .cupdoard_constructor {
+	text-align: center;
+	margin: 0px 0px 10px 0px;
+}
+#cupdoard_body .cupdoard_settings {
+	text-align: left;
+}
+#cupdoard_body .cupdoard_button {
+	display: block;
+	float:left;
+	color: #888;
+	margin: 10px 10px 0 10px;
+	padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+	text-decoration: none;
+}
+.div_head #senator{margin-left: 0;}
+#cupdoard_body .cupdoard_button span{color: #212121;}
+#cupdoard_body .cupdoard_active,#cupdoard_body .cupdoard_active span {
+	color: #DA0000;
+}
+#cupdoard_body .cupdoard_active{
+	border: 1px solid #ccc; 
+	border-bottom: 0 none;
+	background-color: #FFFFFF;
+	border-radius: 3px 3px 0 0;
+}
+#cupdoard_body .div_head {
+	overflow: auto;
+    width: 100%;
+}
+#cupdoard_body .settingsBlock1{
+	float: left;
+	width:340px;
+	margin: 5px;	
+}
+.settingsBlock1 select{
+	font-size: 14px;
+    margin-top: 2px;
+    padding: 2px;
+	font-family: "Century Gothic";
+}
+div#content p#all_doors{margin: 0;}
+#cupdoard_body .settingsBlock2{
+	float: left;
+	width:340px;
+	margin: 5px;
+}
+
+#cupdoard_body .settingsBlock1 span {
+    color: #212121;
+    display: block;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2px;
+    width: 150px;
+}
+#cupdoard_body .settingsBlock2 span {
+	display: block;
+	padding: 2px;
+	float: left;
+	width: 170px;
+}
+#orders {
+	background-color: #DA0000;
+	color: #fff;
+	font-size:12px;
+	display: block;
+	padding: 10px;
+	font-weight: bold;
+    width: 52px;
+	overflow: auto;
+}
+#orders_open {
+    background-color: #DA0000;
+    color: #FFFFFF;
+    display: block;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    height: 50px;
+    line-height: 45px;
+    margin-right: 50px;
+    margin-top: -60px;
+    overflow: auto;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+}
+#cupdoard_body .resume_output{
+	background-color: #DDDDDD;
+    max-width: 600px;
+    margin: 0 auto;
+	padding: 5px 0;
+}
+#cupdoard_body .summ {
+    font-size: 14px;
+    margin: 0px 30px 0;
+    padding: 20px;
+}
+#cupdoard_body .summ #summ, .currency{
+	font-weight: bold;
+	font-size: 24px;
+}
+#status {
+	font-weight: bold;
+	clear: both;
+}
+.orders_form {
+    background-color: #DDDDDD;
+    display: none;
+    margin: 30px;
+    padding: 20px;
+}
+.calcOrderText {
+	display: block;
+	height: 20px;
+	padding: 2px;
+	width: 100px;
+	float: left;
+}
+.backlight_left {
+	float:left;
+	width: 12px;
+	height: 30px;
+	padding:0;
+	margin:0;
+	background-image:url(planka_left.png);
+	display:none;
+}
+.backlight_right {
+
+	float:left;
+
+	width: 12px;
+
+	height: 30px;
+
+	padding:0;
+
+	margin:0;
+
+	background-image:url(planka_right.png);
+
+	display:none;
+
+}
+
+.backlight_center {
+
+	float:left;
+
+	width: 12px;
+
+	height: 30px;
+
+	padding:0;
+
+	margin:0;
+
+	background-image:url(planka_bg.png);
+
+	display:none;
+
+}
+
+.backlight_lamp {
+
+	display: block;
+
+	width:33px;
+
+	height: 30px;
+
+	float: left;
+
+	padding:0;
+
+	background-image:url(lampa.png);
+
+}
+.backlight {
+	height: 30px;
+	margin: 0 auto;
+}
+.div_head{
+    background: url("../css_images/border-calc.png") repeat-x scroll 0 bottom rgba(0, 0, 0, 0);
+    margin-bottom: 20px;
+}

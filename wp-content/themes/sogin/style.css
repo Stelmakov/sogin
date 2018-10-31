@@ -1754,6 +1754,7 @@ a.bold:active{
 }
 .main_categories .category_row .category:first-child{
     width:240px;
+    max-height: 360px;
 }
 .main_categories .category .black, .main_categories .category .black p{
     color:#000;
@@ -1764,6 +1765,10 @@ a.bold:active{
 .main_categories .category a{
     height:100%;
     float:left;
+    margin:0;
+}
+.main_categories .category a:hover{
+    margin:0;
 }
 .main_categories .hover{
     display:none;

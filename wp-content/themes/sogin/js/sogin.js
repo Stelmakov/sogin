@@ -9,5 +9,7 @@ $(document).ready(function(){
             left:"+=100%"
         });
     });
-    baguetteBox.run('.product_single .images');
+    if (typeof baguetteBox !== 'undefined'){
+        baguetteBox.run('.product_single .images');
+    }
 });

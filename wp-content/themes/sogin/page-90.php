@@ -1,4 +1,10 @@
 <?php get_header(); ?>
+    <script type="text/javascript" src="/wp-content/themes/sogin/js/calc/select2.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/sogin/js/calc/jquery.arcticmodal.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/sogin/js/calc/jquery.jgrowl.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/sogin/js/calc/jquery.fant-calc.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/sogin/js/calc/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/sogin/js/calc/common.js"></script>
 <div class="wrap-calc">
 
 
