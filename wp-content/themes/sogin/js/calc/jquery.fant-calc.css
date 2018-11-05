@@ -496,3 +496,6 @@ textarea:focus::-webkit-input-placeholder {
 textarea:focus::-moz-placeholder {
   color: rgba(137, 137, 137, .8) !important;
 }
+.hidden{
+  display:none;
+}
