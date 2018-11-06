@@ -5,12 +5,13 @@
     <script type="text/javascript" src="/wp-content/themes/sogin/js/calc/jquery.fant-calc.js"></script>
     <script type="text/javascript" src="/wp-content/themes/sogin/js/calc/jquery.fancybox.js"></script>
     <script type="text/javascript" src="/wp-content/themes/sogin/js/calc/common.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/sogin/js/calc/jquery.scrollbar.min.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/sogin/js/calc/common.js"></script>
+    <link rel="stylesheet" href="/wp-content/themes/sogin/js/calc/select2.css">
+    <link rel="stylesheet" href="/wp-content/themes/sogin/js/calc/jquery.scrollbar.css">
     <link rel="stylesheet" href="/wp-content/themes/sogin/js/calc/jquery.fant-calc.css">
+    <h3><?php the_title(); ?></h3>
     <div class="wrap-calc">
-
-
-
-
 
     <div class="container-calc">
 
@@ -1048,43 +1049,62 @@
 
                     <ul class="nav-tabs1" id="control_cabinet">
 
-                        <li class="active"><a href="#" id="senator_btn">Senator</a></li>
+                        <li class="active">
+                            <a href="#" id="senator_btn" class="no-border no-hover">
+                            <div class="circle">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 26 26" enable-background="new 0 0 26 26" xml:space="preserve">
 
-                        <li><a href="#" id="modus_btn">Командор</a></li>
+<path fill="#ffffff" d="M22.567,4.73l-1.795-1.219c-0.495-0.334-1.173-0.205-1.507,0.287l-8.787,12.959l-4.039-4.039  c-0.422-0.42-1.11-0.42-1.533,0l-1.533,1.536c-0.424,0.423-0.424,1.11,0,1.534L9.582,22c0.349,0.347,0.895,0.615,1.387,0.615  s0.988-0.31,1.307-0.774L22.856,6.235C23.191,5.743,23.062,5.066,22.567,4.73z"/>
+</svg>
+                            </div>
+                            <p id="senator_btn">Senator</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" id="modus_btn" class="no-border no-hover">
+                                <div class="circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 26 26" enable-background="new 0 0 26 26" xml:space="preserve">
+
+    <path fill="#ffffff" d="M22.567,4.73l-1.795-1.219c-0.495-0.334-1.173-0.205-1.507,0.287l-8.787,12.959l-4.039-4.039  c-0.422-0.42-1.11-0.42-1.533,0l-1.533,1.536c-0.424,0.423-0.424,1.11,0,1.534L9.582,22c0.349,0.347,0.895,0.615,1.387,0.615  s0.988-0.31,1.307-0.774L22.856,6.235C23.191,5.743,23.062,5.066,22.567,4.73z"/>
+    </svg>
+                                </div>
+                                <p>Командор</p>
+                            </a>
+
+                        </li>
 
                     </ul>
+                    <div class="form-group">
 
-                </div>
+                        <label>Ширина шкафа</label>
 
+                        <select name="" id="width_select">
 
+                        </select>
 
-                <div class="col-xs-5">
-
-                    <div class="wrap-result">
-
-                        <div class="result-area">
-
-                            <div id="result_price"><b>Сумма: </b> <span class="pr-default"></span> <b class="red-b">y.e.</b></div>
-
-                        </div>
+                    </div>
 
 
 
-                        <div class="wrp-order-btn" style="display:none;">
+                    <div class="form-group line-white">
 
-                            <button class="btn btn-warning" id="order_btn">Заказать</button>
+                        <label for="">Кол-во дверей</label>
 
-                        </div>
+                        <select class="js-example-responsive" name="" id="quantity">
 
+                            <option value="2" id="opti_2">2 двери</option>
 
+                        </select>
 
                     </div>
 
                 </div>
 
+
+
+
                 <section>
-
-
 
                     <form action="" method="get" name="form-2" class="form-success">
 
@@ -1146,29 +1166,7 @@
 
                     <div id="copy_one">
 
-                        <div class="form-group">
 
-                            <label>Ширина шкафа</label>
-
-                            <select name="" id="width_select">
-
-                            </select>
-
-                        </div>
-
-
-
-                        <div class="form-group line-white">
-
-                            <label for="">Кол-во дверей</label>
-
-                            <select name="" id="quantity">
-
-                                <option value="2" id="opti_2">2 двери</option>
-
-                            </select>
-
-                        </div>
 
 
 
@@ -1623,6 +1621,29 @@
                 <!--end col-xs-5-->
 
 
+                <div class="col-xs-5">
+
+                    <div class="wrap-result">
+
+                        <div class="result-area">
+
+                            <div id="result_price"><b>Сумма: </b> <span class="pr-default"></span> <b class="red-b">y.e.</b></div>
+
+                        </div>
+
+
+
+                        <div class="wrp-order-btn" style="display:none;">
+
+                            <button class="btn btn-warning" id="order_btn">Заказать</button>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
 
                 <div class="col-xs-6">
 

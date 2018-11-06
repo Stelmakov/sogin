@@ -439,7 +439,7 @@ $(function () {
       // КОПИРОВАНИЕ ТЕКСТА И КАРТИНОК ДЛЯ ОТПРАВКИ
         $('#sendtext').text('');
 
-          var titleOne = $(cpb.controlCab.find('.active a')),
+          var titleOne = $(cpb.controlCab.find('.active p')),
               titleOne = titleOne.text();
 
           var copyOne = [],
@@ -1795,4 +1795,14 @@ $(function () {
 
 $(document).ready(function(){
 	$("#modus_btn").click();
+	$('#control_cabinet a').on('click',function(e){
+	   e.preventDefault();
+    });
+	$('select').select2({
+        minimumResultsForSearch: Infinity,
+        width: 'auto'
+    });
+    $('select').on('select2:open', function(e){
+        $('.select2-results__options').scrollbar().parent().addClass('scrollbar-inner');
+    });
 });	
