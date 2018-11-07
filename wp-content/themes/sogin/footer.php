@@ -111,5 +111,19 @@
 </div>
 </div>
 </body>
+<div id="vizov" class="modal">
+    <div class="modal_inner">
+        <img src="/wp-content/themes/sogin/img/call.png" alt="call-center">
+        <div class="right">
+            <p>Здравствуйте. Дизайнер-замерщик приедет с образцами
+                материалов, спроектирует нужную Вам мебель
+                и рассчитает стоимость.
+                Оставьте номер телефона, чтобы мы перезвонили
+                и согласовали удобную дату и время. </p>
+            <input name="phone" class="send_phone_input" placeholder="+375">
+            <a href="#" class="send_phone btn">Отправить</a>
+        </div>
+    </div>
+</div>
 <?php wp_footer(); ?>
 </html>

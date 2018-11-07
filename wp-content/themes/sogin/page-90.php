@@ -10,8 +10,14 @@
     <link rel="stylesheet" href="/wp-content/themes/sogin/js/calc/select2.css">
     <link rel="stylesheet" href="/wp-content/themes/sogin/js/calc/jquery.scrollbar.css">
     <link rel="stylesheet" href="/wp-content/themes/sogin/js/calc/jquery.fant-calc.css">
-    <h3><?php the_title(); ?></h3>
+    <?php get_template_part('items-header'); ?>
+
+    <div class="left_menu_simple">
+        <?php wp_nav_menu( array( 'theme_location'=> 'left-menu')); ?>
+
+    </div>
     <div class="wrap-calc">
+        <h3 class="page_title"><?php the_title(); ?></h3>
 
     <div class="container-calc">
 
@@ -1040,12 +1046,14 @@
         </div>
 
 
+        <div class="first_half">
+
 
         <div class="wrap-cabinet row1">
 
             <div>
 
-                <div class="col-xs-7">
+                <div class="top_selector">
 
                     <ul class="nav-tabs1" id="control_cabinet">
 
@@ -1057,7 +1065,7 @@
 <path fill="#ffffff" d="M22.567,4.73l-1.795-1.219c-0.495-0.334-1.173-0.205-1.507,0.287l-8.787,12.959l-4.039-4.039  c-0.422-0.42-1.11-0.42-1.533,0l-1.533,1.536c-0.424,0.423-0.424,1.11,0,1.534L9.582,22c0.349,0.347,0.895,0.615,1.387,0.615  s0.988-0.31,1.307-0.774L22.856,6.235C23.191,5.743,23.062,5.066,22.567,4.73z"/>
 </svg>
                             </div>
-                            <p id="senator_btn">Senator</p>
+                            <p id="senator_btn">Сенатор</p>
                             </a>
                         </li>
 
@@ -1075,29 +1083,32 @@
                         </li>
 
                     </ul>
-                    <div class="form-group">
+                    <div class="groups">
+                        <div class="form-group">
 
-                        <label>Ширина шкафа</label>
+                            <label>Ширина шкафа</label>
 
-                        <select name="" id="width_select">
+                            <select name="" id="width_select">
 
-                        </select>
+                            </select>
 
+                        </div>
+
+
+
+                        <div class="form-group line-white">
+
+                            <label for="">Кол-во дверей</label>
+
+                            <select class="js-example-responsive" name="" id="quantity">
+
+                                <option value="2" id="opti_2">2 двери</option>
+
+                            </select>
+
+                        </div>
                     </div>
 
-
-
-                    <div class="form-group line-white">
-
-                        <label for="">Кол-во дверей</label>
-
-                        <select class="js-example-responsive" name="" id="quantity">
-
-                            <option value="2" id="opti_2">2 двери</option>
-
-                        </select>
-
-                    </div>
 
                 </div>
 
@@ -1440,21 +1451,6 @@
 
                 </div>
 
-                <!--end col-xs-5-->
-
-
-
-                <div class="col-xs-6">
-
-                    <div id="view_doors" class="view-doors">
-
-                        <div></div>
-
-                    </div>
-
-                </div>
-
-                <!--end col-xs-6-->
 
             </div>
 
@@ -1580,7 +1576,7 @@
 
                             <label for="">Выдвижные ящики</label>
 
-                            <select name="" id="boxes">
+                            <select name="boxes" id="boxes">
 
                                 <option value="0">нет</option>
 
@@ -1602,7 +1598,7 @@
 
                             <label for="">Подсветка</label>
 
-                            <select name="" id="backglight">
+                            <select name="backlight" id="backglight">
 
                                 <option value="1">нет</option>
 
@@ -1627,7 +1623,7 @@
 
                         <div class="result-area">
 
-                            <div id="result_price"><b>Сумма: </b> <span class="pr-default"></span> <b class="red-b">y.e.</b></div>
+                            <div id="result_price"><p>Итого: </p> <span class="pr-default"></span> <b class="red-b">y.e.</b></div>
 
                         </div>
 
@@ -1645,15 +1641,7 @@
 
                 </div>
 
-                <div class="col-xs-6">
 
-                    <div id="view_doors_inside" class="views-doors-inside">
-
-                        <div></div>
-
-                    </div>
-
-                </div>
 
                 <!--end col-xs-6-->
 
@@ -1664,9 +1652,29 @@
 
 
         </div>
-
+        </div>
         <!--end calc-->
+        <div class="second_half">
 
+            <div class="view-doors_container">
+
+                <div id="view_doors" class="view-doors">
+
+                    <div></div>
+
+                </div>
+
+            </div>
+            <div class="view_doors_inside_container">
+
+                <div id="view_doors_inside" class="views-doors-inside">
+
+                    <div></div>
+
+                </div>
+
+            </div>
+        </div>
     </div>
 
 

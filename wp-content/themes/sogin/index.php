@@ -1,10 +1,14 @@
 <?php get_header(); ?>
-<a class="no-hover no-border" href="/shkafi">
+<a class="no-hover no-border not_mobile" href="/shkaf">
     <img class="full-width" src="<?php echo get_field( 'banner_1');?>" alt="shkafi-kupe">
 </a>
+<a class="no-hover no-border mobile full_width_mobile" href="/shkaf">
+    <img src="<?php echo get_field( 'banner_1_mobile');?>" alt="shkafi-kupe">
+</a>
 <div class="empty_separator"></div>
-<div class="main_categories">
-    <?php $cats = get_field('cats');?>
+<?php $cats = get_field('cats');?>
+<div class="main_categories not_mobile">
+
     <div class="category_row">
         <?php for ($i = 0; $i<3; $i++){ ?>
             <div class="category">
@@ -47,6 +51,10 @@
         <?php } ?>
     </div>
 </div>
+<div class="main_categories_mobile mobile">
+    <?php foreach ($cats as $cat){ ?>
+    <?php } ?>
+    </div>
 <div class="empty_separator_mini"></div>
 <div class="home_arrow_right arrow_big"><div class="arrow_inner"></div><img src="/wp-content/themes/sogin/img/arrow_right.svg"></div>
 <div class="home_benefits">

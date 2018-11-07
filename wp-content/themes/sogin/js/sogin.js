@@ -12,4 +12,11 @@ $(document).ready(function(){
     if (typeof baguetteBox !== 'undefined'){
         baguetteBox.run('.product_single .images');
     }
+    $('.hamburger').on('click',function(){
+        if($(this).hasClass('is-active')){
+            $(this).removeClass('is-active')
+        } else{
+            $(this).addClass('is-active')
+        }
+    });
 });

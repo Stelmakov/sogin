@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700,500&amp;subset=cyrillic-ext" rel="stylesheet">
     <script type="text/javascript" src="/wp-content/themes/sogin/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/sogin/js/jquery.modal.min.js"></script>
     <script type="text/javascript" src="/wp-content/themes/sogin/js/sogin.js"></script>
     <link rel="stylesheet" href="/wp-content/themes/sogin/style.css">
     <?php if (is_single()){ ?>
@@ -18,7 +19,7 @@
 
 <body>
 <div class="sog_container">
-    <div class="top_menu">
+    <div class="top_menu not_mobile">
         <div class="logo">
             <img src="/wp-content/themes/sogin/img/logo.svg" alt="logo">
             <p class="logo_bottom">Шкафы-купе и кухни на заказ в Минске</p>
@@ -42,8 +43,33 @@
                     </div>
                 </div>
                 <div class="button">
-                    <a href="#" class="btn btn-header no-hover no-border">Вызвать дизайнера-замерщика</a>
+                    <a href="#vizov" rel="modal:open" class="btn btn-header no-hover no-border">Вызвать дизайнера-замерщика</a>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="top_menu_mobile mobile">
+        <div class="top">
+            <div class="logo">
+                <img src="/wp-content/themes/sogin/img/logo_mobile.svg" alt="logo">
+                <p class="logo_bottom">Шкафы-купе и кухни на заказ в Минске</p>
+            </div>
+            <button class="hamburger hamburger--spin" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+        </div>
+        <div class="phones">
+            <p  class="bottom_text">Звоните с 9 до 22</p>
+            <div class="phone">
+                <a class="bold" href="tel:<?php echo get_field( 'phone_1',19);?>"><?php echo get_field( 'phone_1',19);?></a>
+            </div>
+            <div class="phone">
+                <a class="bold" href="tel:<?php echo get_field( 'phone_2',19);?>"><?php echo get_field( 'phone_2',19);?></a>
+            </div>
+            <div class="phone">
+                <a class="bold" href="tel:<?php echo get_field( 'phone_3',19);?>"><?php echo get_field( 'phone_3',19);?></a>
             </div>
         </div>
     </div>

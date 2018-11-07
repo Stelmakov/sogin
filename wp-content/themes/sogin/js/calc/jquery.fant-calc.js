@@ -1402,7 +1402,8 @@ $(function () {
        var sideBoxPrice =  $(this).children('option:selected').data('side-shelves'),
            sideBoxPrice = parseInt(sideBoxPrice),
            dynamicPrice = parseInt(cpb.priceDefault.html());
-
+        $('.del-shelves-left').remove();
+        $('.del-shelves-right').remove();
          if ($(this).val() != 0) {
            if (!cpb.resultPrice.children('span').hasClass('shel-del')) {
              $('<span class="hidden shel-del">'+sideBoxPrice+'</span>').insertAfter(cpb.priceDefault);
@@ -1463,12 +1464,12 @@ $(function () {
            cpb.viewDoorsImgsInside.append('<img src="'+shelvesImgsL[3]+'" class="del-shelves-left" alt="">')
          }
 
-         $('.del-shelves-left').load(function () {
-           $('.del-shelves-left').css({
-             'top' : (cpb.viewDoorsImgsInside.height() - $('.del-shelves-left').height()) / 2,
-             'left' : insideLeftFirst - $('.del-shelves-left').width()
-           });
-         });
+           setTimeout(function() {
+               $('.del-shelves-left').css({
+                 'top' : 0,
+                 'left' : 0 - $('.del-shelves-left')[0].offsetWidth
+               }).css('opacity',1);
+            },200);
 
        }
        else if ($(this).val() == 2) {
@@ -1486,13 +1487,12 @@ $(function () {
          else if (cpb.qunatShelves.val() == 4) {
            cpb.viewDoorsImgsInside.append('<img src="'+shelvesImgsR[3]+'" class="del-shelves-right" alt="">')
          }
-
-         $('.del-shelves-right').load(function () {
-          $('.del-shelves-right').css({
-             'top' : (cpb.viewDoorsImgsInside.height() - $('.del-shelves-right').height()) / 2,
-             'left' : insideLeftLast
-           });
-         });
+           setTimeout(function() {
+               $('.del-shelves-right').css({
+                   'top': 0,
+                   'left': insideLeftLast
+               }).css('opacity',1);
+           },200);
 
        }
        else if ($(this).val() == 3) {
@@ -1511,12 +1511,12 @@ $(function () {
            cpb.viewDoorsImgsInside.append('<img src="'+shelvesImgsL[3]+'" class="del-shelves-left" alt="">')
          }
 
-         $('.del-shelves-left').load(function () {
-           $('.del-shelves-left').css({
-             'top' : (cpb.viewDoorsImgsInside.height() - $('.del-shelves-left').height()) / 2,
-             'left' : insideLeftFirst - $('.del-shelves-left').width()
-           });
-         });
+           setTimeout(function() {
+               $('.del-shelves-left').css({
+                 'top' : 0,
+                 'left' : insideLeftFirst - $('.del-shelves-left')[0].offsetWidth
+               }).css('opacity',1);
+            },200);
 
          if (cpb.qunatShelves.val() == 1) {
            cpb.viewDoorsImgsInside.append('<img src="'+shelvesImgsR[0]+'" class="del-shelves-right" alt="">')
@@ -1531,12 +1531,12 @@ $(function () {
            cpb.viewDoorsImgsInside.append('<img src="'+shelvesImgsR[3]+'" class="del-shelves-right" alt="">')
          }
 
-         $('.del-shelves-right').load(function () {
-          $('.del-shelves-right').css({
-             'top' : (cpb.viewDoorsImgsInside.height() - $('.del-shelves-right').height()) / 2,
-             'left' : insideLeftLast
-           });
-         });
+           setTimeout(function() {
+              $('.del-shelves-right').css({
+                 'top' : 0,
+                 'left' : insideLeftLast
+               }).css('opacity',1);
+          },200);
 
        }
        else {
@@ -1573,12 +1573,12 @@ $(function () {
          cpb.viewDoorsImgsInside.append('<img src="'+shelvesImgsL[3]+'" class="del-shelves-left" alt="">')
         }
 
-         $('.del-shelves-left').load(function () {
-           $('.del-shelves-left').css({
-             'top' : (cpb.viewDoorsImgsInside.height() - $('.del-shelves-left').height()) / 2,
-             'left' : insideLeftFirst - $('.del-shelves-left').width()
-           });
-         });
+          setTimeout(function() {
+              $('.del-shelves-left').css({
+                  'top' : 0,
+                  'left' : 0 - $('.del-shelves-left')[0].offsetWidth
+              }).css('opacity',1);
+          },200);
       }
       else if (cpb.shelves.val() == 2) {
         if ($(this).val() == 1) {
@@ -1598,12 +1598,13 @@ $(function () {
          cpb.viewDoorsImgsInside.append('<img src="'+shelvesImgsR[3]+'" class="del-shelves-right" alt="">')
         }
 
-         $('.del-shelves-right').load(function () {
-          $('.del-shelves-right').css({
-             'top' : (cpb.viewDoorsImgsInside.height() - $('.del-shelves-right').height()) / 2,
-             'left' : insideLeftLast
-           });
-         });
+
+          setTimeout(function() {
+              $('.del-shelves-right').css({
+                  'top' : 0,
+                  'left' : insideLeftLast
+              }).css('opacity',1);
+          },200);
       }
       else if (cpb.shelves.val() == 3) {
         if ($(this).val() == 1) {
@@ -1627,17 +1628,18 @@ $(function () {
          cpb.viewDoorsImgsInside.append('<img src="'+shelvesImgsR[3]+'" class="del-shelves-right" alt="">')
         }
 
-       $('.del-shelves-left, .del-shelves-right').load(function () {
-         $('.del-shelves-left').css({
-           'top' : (cpb.viewDoorsImgsInside.height() - $('.del-shelves-left').height()) / 2,
-           'left' : insideLeftFirst - $('.del-shelves-left').width()
-         });
+          setTimeout(function() {
+              $('.del-shelves-left').css({
+                  'top' : 0,
+                  'left' : 0 - $('.del-shelves-left')[0].offsetWidth
+              }).css('opacity',1);
+              $('.del-shelves-right').css({
+                  'top' : 0,
+                  'left' : insideLeftLast
+              }).css('opacity',1);
+          },200);
 
-         $('.del-shelves-right').css({
-           'top' : (cpb.viewDoorsImgsInside.height() - $('.del-shelves-right').height()) / 2,
-           'left' : insideLeftLast
-         });
-       });
+
 
       }
 
@@ -1687,8 +1689,6 @@ $(function () {
            cpb.viewDoorsImgsInside.append('<img src="'+$('#data_boxes').data('box-two')+'" class="boximg-del boxnumber-'+i+'">')
           }
         }
-
-        $('.boximg-del').load(function () {
           $('.boximg-del').each(function () {
 
             $(this).css({
@@ -1706,7 +1706,6 @@ $(function () {
           $('.boxnumber-3').css({'bottom' : '126px'});
           $('.boximg-del ').css('z-index', '1');
 
-        });
 
     },
     backglightPrice: function () {
@@ -1752,10 +1751,9 @@ $(function () {
             cpb.viewDoorsImgsInside.append('<img class="backl-four" src="'+backlImgs[2]+'" alt="">');
           }
 
-           $('img[class^="backl"').load(function () {
+           // $('img[class^="backl"').load(function () {
              $(this).css('left', (cpb.viewDoorsImgsInside.width() - $('img[class^="backl"').width()) / 2);
-             $(this).parent().css('margin-top', '40px')
-           });
+           // });
 
         }
         else {
