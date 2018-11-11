@@ -2822,7 +2822,9 @@ input{
 button{
     outline: none;
 }
-
+.top_menu{
+    display:flex;
+}
 @media (max-width: 1230px){
     .sog_container{
         width:100%;
@@ -2900,5 +2902,89 @@ button{
     }
     .full_width_mobile{
         margin:0 -15px;
+    }
+    .main_categories_mobile{
+        margin: 0 -15px;
+    }
+    .main_categories_mobile .category{
+        float:left;
+        width:100%;
+    }
+    .main_categories_mobile .category a{
+        width:100%;
+    }
+    .small_mobile{
+        margin:0px;
+    }
+    .main_categories_mobile .category{
+        min-height:250px;
+    }
+    .home_arrow_right .arrow_inner{
+        height:1px;
+    }
+    .home_benefits {
+        flex-direction:column;
+    }
+    .home_arrow_right .text_right p{
+        color:#000;
+        font-size:14px;
+    }
+    .home_arrow_right .text_right .top{
+        font-size:16px;
+        font-weight:400;
+    }
+    .home_benefits .not_mobile{
+        display:none;
+    }
+    .sogin{
+        font-size:11vw;
+        font-weight: 700;
+        color: #f7f1ef;
+        white-space: nowrap;
+        margin-bottom: 0px;
+    }
+    .main_categories .category a{
+        max-height: 400px;
+        overflow: hidden;
+    }
+    .home_arrow_right{
+        margin-left:-15px;
+    }
+    .home_arrow_right.arrow_big .arrow_inner{
+        width:42%;
+    }
+    .main_categories_mobile .category:first-child .back{
+        margin-top:-205px;
+    }
+    .main_categories_mobile .category:nth-child(4) .back{
+        margin-top:-205px;
+    }
+    .main_categories_mobile{
+        margin:10px -15px;
+    }
+    .main_categories_mobile .category{
+        margin:10px 0;
+    }
+    .main_categories .category .inner{
+        padding: 20px 10px 20px 25px;
+    }
+    .arrow_big img{
+        width:14px;
+    }
+    .home_benefits{
+        margin:10px -10px;
+    }
+    .home_benefits .item{
+        margin-bottom:20px;
+    }
+    .arrow_small{
+        margin-top:-53px;
+    }
+    .arrow_small .text_right p{
+        width:125px;
+        white-space:normal;
+    }
+    .home_arrow_right.arrow_small .arrow_inner{
+        width:66%;
     }
 }
