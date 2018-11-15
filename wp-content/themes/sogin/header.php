@@ -48,6 +48,50 @@
             </div>
         </div>
     </div>
+    <div class="mobile_menu_container">
+        <div class="moblie_menu">
+            <li><?php if (!is_home()){ ?> <a class="no-hover no-border" href=/">Главная</a><?php } else { ?><span>Главная</span><?php } ?></li>
+            <p class="menu_header">Каталог</p>
+            <div class="menu_items">
+                <?php
+                global $wpdb;
+                $head_term = get_queried_object();
+                $results = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}posts WHERE post_excerpt = 'category_type'" );
+                $content = unserialize($results[0]->post_content);
+                $types_list = $content['choices'];
+                foreach ($types_list as $key => $type){
+                    $args = array(
+                        'hide_empty' => false,
+                        'meta_query' => array(
+                            array(
+                                'key'       => 'category_type',
+                                'value'     => $key,
+                                'compare'   => 'LIKE'
+                            )
+                        )
+                    );
+                    $terms = get_terms( $head_term->taxonomies[0], $args );
+                    if ($terms){
+                        ?>
+                        <div class="category_group">
+                            <p class="category_header"><?php echo $type; ?></p>
+                            <ul>
+                                <?php foreach ($terms as $term){ ?>
+                                    <li>
+                                        <a  href="/<?php echo $term->taxonomy. '/' . $term->slug?>"><?php echo $term->name; ?></a>
+                                    </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+
+                    <?php } } ?>
+            </div>
+            <p class="menu_header">Меню сайта</p>
+            <div class="menu_items">
+                <?php wp_nav_menu( array( 'theme_location'=> 'header-menu')); ?>
+            </div>
+        </div>
+    </div>
     <div class="top_menu_mobile mobile">
         <div class="top">
             <div class="logo">

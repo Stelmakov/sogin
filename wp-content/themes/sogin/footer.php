@@ -1,5 +1,5 @@
 
-<div class="home_container">
+<div class="home_container expand">
     <div class="a_container">
         <a class="header" href="/otzivi/">Мнение клиентов</a>
     </div>
@@ -18,8 +18,8 @@
         <?php } ?>
     </div>
 </div>
-<div class="empty_separator"></div>
-<div class="home_container">
+<div class="empty_separator not_mobile"></div>
+<div class="home_container expand">
     <div class="a_container">
         <a class="header" href="/works/">Последние выполненные работы</a>
     </div>
@@ -69,7 +69,7 @@
         <div class="logo">
             <img src="/wp-content/themes/sogin/img/logo.svg" alt="logo">
             <p class="logo_bottom">Шкафы-купе и кухни на заказ в Минске</p>
-            <a href="#" class="btn btn-inverted">Вызвать дизайнера- замерщика</a>
+            <a href="#" class="btn btn-inverted not_mobile">Вызвать дизайнера- замерщика</a>
         </div>
     </div>
     <div class="footer_item">
@@ -79,7 +79,7 @@
                 <a class="bold" href="tel:<?php echo get_field( 'phone_1',19);?>"><?php echo get_field( 'phone_1',19);?></a>
                 <a class="bold" href="tel:<?php echo get_field( 'phone_2',19);?>"><?php echo get_field( 'phone_2',19);?></a>
                 <a class="bold" href="tel:<?php echo get_field( 'phone_3',19);?>"><?php echo get_field( 'phone_3',19);?></a>
-                <p class="bottom_text">Акции, конкурсы, скидки в наших сообществах</p>
+                <p class="bottom_text bottom_text_separate">Акции, конкурсы, скидки в наших сообществах</p>
                 <div class="social_links">
                     <div class="item">
                         <a class="no-hover no-border" href="#"><img src="/wp-content/themes/sogin/img/facebook.svg" alt="facebook"></a>
@@ -108,7 +108,17 @@
     <div class="footer_item">
         <img class="logo_tof" src="/wp-content/themes/sogin/img/logo_tof.svg" alt="tof">
     </div>
+
 </div>
+</div>
+<div class="bottom_buttons">
+    <a class="no-hover no-border yellow" href="tel:<?php echo get_field( 'phone_1',19);?>">
+        <img src="/wp-content/themes/sogin/img/call_me.svg" alt="call_me">
+        <p>Позвонить</p>
+    </a>
+    <a class="no-hover no-border call"  href="#vizov" rel="modal:open">
+        <p>Вызвать дизайнера-замерщика</p>
+    </a>
 </div>
 </body>
 <div id="vizov" class="modal">

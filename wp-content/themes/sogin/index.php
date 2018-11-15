@@ -114,25 +114,38 @@
 </div>
 <p class="sogin mobile">С О Г И Н - Л Ю К С</p>
 
-<div class="empty_separator_mini"></div>
+<div class="empty_separator_mini small_mobile"></div>
 <div class="banner not_mobile">
     <img class="full-width" src="/wp-content/themes/sogin/img/banner_home_3.png" alt="home">
     <a class="no-border no-hover" href="viber://add?number=<?php echo get_field( 'phone_3',19);?>">
         <img class="viber display-none" src="/wp-content/themes/sogin/img/viber.svg" alt="viber">
     </a>
 </div>
-    <img class="full-width full_width_mobile mobile" src="/wp-content/themes/sogin/img/home_banner_mobile_2.jpg" alt="home">
-<div class="empty_separator_mini"></div>
-<img class="full-width" src="/wp-content/themes/sogin/img/home_banner_4.jpg" alt="home">
-<div class="empty_separator_mini"></div>
+
+<div class="full_width_mobile">
+    <img class="full-width mobile" src="/wp-content/themes/sogin/img/home_banner_mobile_2.jpg" alt="home">
+</div>
+<div class="empty_separator_mini not_mobile"></div>
+<a class="viber_mobile mobile btn" href="tel:<?php echo get_field( 'phone_3',19);?>">
+    <p>Задайте вопрос дизайнеру-консультанту</p>
+    <img src="/wp-content/themes/sogin/img/if_arrow-right_2561331.svg" class="arrow" alt="arrow_white">
+    <img class="viber" src="/wp-content/themes/sogin/img/viber_white.svg" alt="viber_white">
+</a>
+<div class="empty_separator_mini not_mobile"></div>
+<img class="full-width not_mobile" src="/wp-content/themes/sogin/img/home_banner_4.jpg" alt="home">
+<div class="full_width_mobile">
+    <img class="full-width mobile" src="/wp-content/themes/sogin/img/home_banner_4_mobile.jpg" alt="home">
+</div>
+<div class="empty_separator_mini not_mobile"></div>
 <div class="banner_mini">
     <p>Нас рекомендуют своим близким, друзьям, коллегам и соседям</p>
 </div>
-<div class="empty_separator"></div>
-<img class="full-width" src="/wp-content/themes/sogin/img/banner_home_5.png" alt="home">
-<div class="empty_separator_mini"></div>
-<div class="footer">
-
+<div class="empty_separator not_mobile"></div>
+<img class="full-width not_mobile" src="/wp-content/themes/sogin/img/banner_home_5.png" alt="home">
+<div class="full_width_mobile banner_5">
+    <img class="full-width mobile " src="/wp-content/themes/sogin/img/banner_5_mobile.png" alt="home">
 </div>
+<div class="empty_separator_mini"></div>
+
 
 <?php get_footer(); ?>
