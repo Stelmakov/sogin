@@ -2832,6 +2832,9 @@ input:focus{
 .bottom_buttons{
     display:none;
 }
+.mobile_menu_container{
+    display:none;
+}
 @media (max-width: 1230px){
     .sog_container{
         width:100%;
@@ -2993,6 +2996,7 @@ input:focus{
         padding: 9px 14px;
         width: calc(100% - 10px);
         text-align:left;
+        justify-content:center;
     }
     .viber_mobile .arrow{
         margin-left:8px;
@@ -3247,10 +3251,90 @@ input:focus{
     .main_categories_mobile .category a{
         width:100%;
     }
+    .mobile_menu_container{
+        display:none;
+        position:fixed;
+        width:100%;
+        height:100%;
+        overflow:auto;
+        background-color: #fff;
+        left:0px;
+        top:0px;
+        z-index:1000000;
+    }
+    .hamburger{
+        z-index:10000001;
+    }
+
+    .mobile_menu_container li {
+        list-style-type:none;
+    }
+    .mobile_menu{
+        padding:20px;
+    }
+    .menu_header{
+        margin-bottom:5px;
+        margin-top: 20px;
+        font-size:12px;
+        color:#e1e1e1;
+    }
+    .menu_expand_container img{
+        width:6px;
+        -webkit-animation:spin 4s linear infinite;
+        -moz-animation:spin 4s linear infinite;
+        animation:spin 4s linear infinite;
+    }
+    .menu_expand_container.active > .menu_expand_header img{
+        transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+    }
+    .children{
+        display:none;
+    }
+    .menu_expand_header a:hover{
+        color:#0E8C87;
+        border-bottom:1px solid #D0E8E7;
+    }
+    .header_slider .arrow_next{
+        display:none;
+    }
+    .header_slider .arrow_prev{
+        display:none;
+    }
+    .header_slider .slider_first{
+        width:1017px;
+    }
+    .header_slider .slider_second{
+        width:1200px;
+    }
+    .header_slider .slider_first_inner{
+        width:100%;
+    }
+    .header_slider .slider_second_inner{
+        width:100%;
+        justify-content:flex-start;
+    }
+    .products{
+        float:left;
+        margin:0 -15px;
+    }
+    .category .category_inner{
+        width:100%;
+    }
+    .products .product {
+        width:100% !important;
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+    }
+    .slider_container{
+        margin:0 -15px;
+    }
+    .kama_breadcrumbs{
+        margin:15px 0;
+    }
 }
-.mobile_menu_container{
-    display:none;
-}
+
 @media (max-width: 550px) {
     .home_arrow_right{
         margin-left:-15px;
@@ -3303,6 +3387,9 @@ input:focus{
 @media (max-width: 390px) {
     .send_phone_input{
         width:57%;
+    }
+    .viber_mobile p{
+        white-space: normal;
     }
     .bottom_buttons .call{
         padding:5px 18px;

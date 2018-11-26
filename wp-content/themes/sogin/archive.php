@@ -1,13 +1,14 @@
 <?php get_header(); ?>
 <?php get_template_part('items-header'); ?>
 <div class="category">
-    <div class="left_menu">
+    <div class="left_menu not_mobile">
             <?php
             global $wpdb;
             $head_term = get_queried_object();
             $results = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}posts WHERE post_excerpt = 'category_type'" );
             $content = unserialize($results[0]->post_content);
             $types_list = $content['choices'];
+
             foreach ($types_list as $key => $type){
                 $args = array(
                     'hide_empty' => false,

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700,500&amp;subset=cyrillic-ext" rel="stylesheet">
     <script type="text/javascript" src="/wp-content/themes/sogin/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/sogin/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/sogin/js/jquery.touch.min.js"></script>
     <script type="text/javascript" src="/wp-content/themes/sogin/js/jquery.modal.min.js"></script>
     <script type="text/javascript" src="/wp-content/themes/sogin/js/sogin.js"></script>
     <link rel="stylesheet" href="/wp-content/themes/sogin/style.css">
@@ -49,43 +51,60 @@
         </div>
     </div>
     <div class="mobile_menu_container">
-        <div class="moblie_menu">
+        <div class="mobile_menu">
             <li><?php if (!is_home()){ ?> <a class="no-hover no-border" href=/">Главная</a><?php } else { ?><span>Главная</span><?php } ?></li>
             <p class="menu_header">Каталог</p>
-            <div class="menu_items">
-                <?php
-                global $wpdb;
-                $head_term = get_queried_object();
-                $results = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}posts WHERE post_excerpt = 'category_type'" );
-                $content = unserialize($results[0]->post_content);
-                $types_list = $content['choices'];
-                foreach ($types_list as $key => $type){
-                    $args = array(
-                        'hide_empty' => false,
-                        'meta_query' => array(
-                            array(
-                                'key'       => 'category_type',
-                                'value'     => $key,
-                                'compare'   => 'LIKE'
-                            )
-                        )
-                    );
-                    $terms = get_terms( $head_term->taxonomies[0], $args );
-                    if ($terms){
-                        ?>
-                        <div class="category_group">
-                            <p class="category_header"><?php echo $type; ?></p>
-                            <ul>
-                                <?php foreach ($terms as $term){ ?>
-                                    <li>
-                                        <a  href="/<?php echo $term->taxonomy. '/' . $term->slug?>"><?php echo $term->name; ?></a>
-                                    </li>
-                                <?php } ?>
-                            </ul>
-                        </div>
+            <?php $items = array(
+                    'shkaf' => array('Шкафы-купе','shkafi'),
+                    'kitchen' => array('Кухни','kitchens'),
+                    'garderob' => array('Гардеробы','garderobi'),
+                    'gorka' => array('Горки','gorki'),
+            ); ?>
+            <?php foreach ($items as $key => $item) { ?>
+                <div class="menu_expand_container">
+                    <div class="menu_expand_header">
+                        <img src="/wp-content/themes/sogin/img/arrow_right_green.svg" alt="arrow">
+                        <a class="no-hover" href="/<?php echo $key; ?>"><?php echo $item[0]; ?></a>
+                    </div>
+                    <div class="children">
+                        <div class="menu_items">
+                            <?php
+                            global $wpdb;
+                            $head_term = get_queried_object();
+                            $results = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}posts WHERE post_excerpt = 'category_type'" );
 
-                    <?php } } ?>
-            </div>
+                            $content = unserialize($results[0]->post_content);
+                            $types_list = $content['choices'];
+                            foreach ($types_list as $key => $type){
+                                $args = array(
+                                    'hide_empty' => false,
+                                    'meta_query' => array(
+                                        array(
+                                            'key'       => 'category_type',
+                                            'value'     => $key,
+                                            'compare'   => 'LIKE'
+                                        )
+                                    )
+                                );
+                                $terms = get_terms( $item[1], $args );
+                                if ($terms){
+                                    ?>
+                                    <div class="category_group">
+                                        <p class="category_header"><?php echo $type; ?></p>
+                                        <ul>
+                                            <?php foreach ($terms as $term){ ?>
+                                                <li>
+                                                    <a  href="/<?php echo $term->taxonomy. '/' . $term->slug?>"><?php echo $term->name; ?></a>
+                                                </li>
+                                            <?php } ?>
+                                        </ul>
+                                    </div>
+
+                                <?php } } ?>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
             <p class="menu_header">Меню сайта</p>
             <div class="menu_items">
                 <?php wp_nav_menu( array( 'theme_location'=> 'header-menu')); ?>
